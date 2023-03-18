@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "textbased"
+version = "0.0.1"
+description = "A package to supplement making textbased CLI games."
+authors = ["Tom Van Manen <->"]
+readme = "README.md"
+license = "Hippocratic-3.0"
+packages = [{include = "textbased"}]
+
+[tool.poetry.dependencies]
+python = "^3.9.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
