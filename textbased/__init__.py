@@ -4,3 +4,6 @@
 #   import textbased
 #   x = textbased.foo.func()
 import textbased.foo as foo
+import textbased.decor as decor
+import textbased.game as game
+import textbased.retro as retro
