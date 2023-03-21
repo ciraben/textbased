@@ -8,8 +8,7 @@ import time
 #         print(str)
 #         sys.stdout.write('\033[0m')
 #     return inner
-
-from .constants import ANSI_COLOUR_CODES as PRINT_COLOURS
+from .constants import ANSI_FG_COLOUR_CODES as PRINT_COLOURS
 
 def print(strng = '', sep = ' ',  end = '\n', speed = 1, mod = ''):
 
