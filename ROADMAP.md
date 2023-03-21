@@ -2,9 +2,16 @@
 ```zsh
 .
 └── textbased
-    ├── decor
+    ├── constants
+    |   ├── ANSI_COLOUR_CODES
+    ├── string
     |   ├── inboxify(str)
-    |   ├── mk(green)
+    |   ├── bgcol(green)
+    |   ├── fgcol(green)
+    ├── decor
+    |   ├── inboxify()
+    |   ├── bgcol(green)
+    |   ├── fgcol(green)
     ├── screen
     |   ├── clear
     |   ├── cursor_to(x,y)
