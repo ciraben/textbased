@@ -45,3 +45,4 @@ if __name__ == "__main__":
     # time.sleep(1)
     # # cursor_to(WIDTH/2, HEIGHT/2)
     # clear(WIDTH//2, HEIGHT//2)
+    pass
