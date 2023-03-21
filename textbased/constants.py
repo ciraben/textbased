@@ -1,5 +1,5 @@
 
-ANSI_COLOUR_CODES = {
+ANSI_FG_COLOUR_CODES = {
     "black": 30,
     "red": 31,
     "dk-red": 31,
@@ -23,3 +23,6 @@ ANSI_COLOUR_CODES = {
     "dk-white": 37,
     "lt-white": 97
 }
+# background colours are the same but value-shifted by 10
+ANSI_BG_COLOUR_CODES = {key: ANSI_FG_COLOUR_CODES[key] +
+    10 for key in ANSI_FG_COLOUR_CODES}
