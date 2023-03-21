@@ -1,3 +1,6 @@
+# python build stuff
+__pycache__
+
 # python venv stuff
 .env
 .venv
