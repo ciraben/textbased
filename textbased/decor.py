@@ -21,15 +21,20 @@ def inboxify(mystring):
     new_lines.append(box_line)
     return '\n'.join(new_lines)
 
+# def get_ansi_code(colour, bg = False):
+#     if bg:
+#         return f"38;2;{colour[0]};{colour[1]};{colour[2]}"
+
 def fgcol(colour):
     if colour in ANSI_FG_COLOUR_CODES:
-        fgcol_code = ANSI_FG_COLOUR_CODES[colour]
+        fgcode = ANSI_FG_COLOUR_CODES[colour]
     else:
         # assume colour is an RGB tuple
-        pass
+        fgcode = f"38;2;{colour[0]};{colour[1]};{colour[2]}"
     def decorator(fun):
         def inner(*args, **kwargs):
-            sys.stdout.write(f'\033[{fgcol_code}m')
+            sys.stdout.write('\033[' +
+                fgcode + 'm')
             fun(*args, **kwargs)
             sys.stdout.write('\033[0m')
         return inner
@@ -37,13 +42,13 @@ def fgcol(colour):
 
 def bgcol(colour):
     if colour in ANSI_BG_COLOUR_CODES:
-        bgcol_code = ANSI_BG_COLOUR_CODES[colour]
+        bgcode = ANSI_BG_COLOUR_CODES[colour]
     else:
         # assume colour is an RGB tuple
-        pass
+        bgcode = f"48;2;{colour[0]};{colour[1]};{colour[2]}"
     def decorator(fun):
         def inner(*args, **kwargs):
-            sys.stdout.write(f'\033[{bgcol_code}m')
+            sys.stdout.write(f'\033[{bgcode}m')
             fun(*args, **kwargs)
             sys.stdout.write('\033[0m')
         return inner
@@ -51,7 +56,9 @@ def bgcol(colour):
 
 if __name__ == "__main__":
 
-    # for colour in ANSI_FG_COLOUR_CODES:
-    #     fgcol(colour)(print)('hello', end='')
-    #     bgcol(colour)(print)('hello')
+    # for number in range(0, 256):
+    #     for other_number in range(0, 256):
+    #         bgcol((number, other_number, 255))(print)(' ', end='')
+    #     print()
+    # bgcol(colour)(print)('hello')
     pass
