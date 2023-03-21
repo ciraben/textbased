@@ -7,7 +7,5 @@ import textbased.foo as foo
 import textbased.decor as decor
 import textbased.game as game
 import textbased.retro as retro
-<<<<<<< HEAD
-=======
 import textbased.screen as screen
->>>>>>> 489b15d (Add screen module with basic clear/move_cursor options.)
+from textbased.constants import *
